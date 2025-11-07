@@ -64,3 +64,16 @@ fun FormIsian(
                 thickness = 1.dp, // ✅ perbaikan: tidak ada "Thickness"
                 color = Color.Red
             )
+            Row {
+                jenisK.forEach { item ->
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically // ✅ perbaikan posisi
+                    ) {
+                        RadioButton(
+                            selected = false,
+                            onClick = { /* TODO: aksi nanti */ }
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
